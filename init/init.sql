@@ -12,4 +12,12 @@ create table IF NOT EXISTS ROLE (
 
 create table IF NOT EXISTS authorized_client (
     id uuid DEFAULT uuid_generate_V4() NOT NULL
+    name varchar(255) NOT NULL
+    display_name varchar(255) NOT NULL
+    secrets varchar(255) NOT NULL
+)
+
+create table IF NOT EXISTS authorized_scope (
+    id uuid DEFAULT uuid_generate_V4() NOT NULL
+    name varchar(255) NOT NULL
 )
